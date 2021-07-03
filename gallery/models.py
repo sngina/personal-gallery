@@ -30,11 +30,11 @@ class Location(models.Model):
 
 
 class Image(models.Model):
-    image_photo = models.ImageField(upload_to = 'image/')
+    image_photo = models.ImageField(upload_to = 'image/' , null = True)
     image_name = models.CharField(max_length= 30)
     image_description = models.CharField(max_length=30)
-    image_category = models.ForeignKey(Category)
-    image_location = models.ForeignKey(Location)
+    image_category = models.ForeignKey(Category , null = True)
+    image_location = models.ForeignKey(Location , null = True)
     # the save function
 
     def save_image(self):

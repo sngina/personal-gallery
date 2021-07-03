@@ -12,6 +12,15 @@ class Image(models.Model):
     # delete function for image
     def delete(self):
         self.delete()
+
+    #update function
+    def update(self):
+        self.update()
+
+   #getting image by there id
+    def get_image_by_id(id):
+       id.get()
+
    
 
 

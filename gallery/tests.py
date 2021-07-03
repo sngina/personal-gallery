@@ -15,8 +15,17 @@ class CategoryTestClass(TestCase):
         self.image.save_category()
         category = Category.objects.all()
         self.assertTrue(len(category) >0)
-
-        
-
+        #test delete method
+    def test_delete_method(self):
+        self.image.save_category()
+        category = Category.objects.all()
+        self.image.objects.filter(id = self.image.id).delete()
+        self.assertTrue(len(category) ==0)
+class ImageTestCase(TestCase):
+    #creating new image and saving it.
+    def setup(self):    
+        self.image.save_image()
+        images = Image.objects.all()
+        self.assertTrue(len(images) >0)
 
 

@@ -3,6 +3,8 @@ from django.shortcuts import render , redirect
  # class
 class Category(models.Model):
     selfies = models.CharField(max_length= 50)
+    def __str__(self):
+        return self.selfies
     # save function
     def save_category(self):
         self.save()
@@ -36,12 +38,14 @@ class Image(models.Model):
     image_category = models.ForeignKey(Category , null = True)
     image_location = models.ForeignKey(Location , null = True)
     # the save function
-
+    def __str__(self):
+        return self.image_name
     def save_image(self):
         self.save()
     # delete function for image
-    def delete(self):
-        self.delete()
+    @classmethod
+    def delete_image(cls, id):
+        cls.objects.filter(id=id).delete()
     @classmethod
     #update function
     def update(cls , id , update):

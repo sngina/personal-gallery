@@ -1,1 +1,1 @@
-web: gunicorn stella_image.wsgi --log-file -
+web: gunicorn stella_images.wsgi --log-file -

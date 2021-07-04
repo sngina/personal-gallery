@@ -1,0 +1,21 @@
+{%extends 'base.html'%} 
+{% block content%}
+{% for new in searched_images %}
+
+<div class="container1">
+   <img src="{{new.image_photo.url}}" style="max-width:100%;cursor:pointer" width="500px" onclick="onClick(this)"
+       class="modal-hover-opacity img-fluid">
+</div>
+<div id="modal01" class="modal" onclick="this.style.display='none'">
+   <span class="close">&times;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+   <div class="modal-content">
+       <img id="img01" style="max-width:100%" class="img-fluid" width="500px">
+       <p>{{new.image_description}}</p>
+       <p>{{new.image_category}}</p>
+       <p>{{new.image_location}}</p>
+       
+
+   </div>
+</div>
+{%endfor%}
+{%endblock%}

@@ -11,12 +11,12 @@ def get_image(request):
 
 #function for searching images
 def search_results(request):
-    if 'image' in request.GET and request.GET["image"]:
-        search_term = request.GET.get("image")
-        searched_images = Image.image_search(search_term)
+    if 'search' in request.GET and request.GET["search"]:
+        search_term = request.GET.get("search")
+        searched_images = Image.search_image(search_term)
         message = f"{search_term}"
 
-        return render(request, 'navbar.html',{"message":message,"image": searched_images})
+        return render(request, 'navbar.html',{"message":message,"searched_images": searched_images})
 
     else:
         message = "You haven't searched for any term"

@@ -1,6 +1,7 @@
 
 {% for new in  all_images%}
  <div class=" image">
+     <img src="{{new.image_photo.url}}" alt="">
 <p>{{new.image_name}}</p>
 <p>{{new.image_description}}</p>
 <p>{{new.image_category}}</p>

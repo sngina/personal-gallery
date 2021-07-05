@@ -5,7 +5,7 @@
 
 ## Description 
 
-This is an Application created for sngina's gallery where you can upload an image ,delete an image and search an image
+This is an Application created for sngina's gallery where you can upload an image ,delete an image and search an image.You can also zoom in a specific image if needed  to and see the description ,category and location where the image was taken from.
 
 
 ---

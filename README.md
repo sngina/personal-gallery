@@ -42,11 +42,13 @@ It is hosted by heroku
         $ python3 manage.py test
         
 ## Technologies Used
-HTML, CSS & Bootstrap
+HTML, CSS & Js
 
 Git
 
 Python
+
+
 
 Django
 

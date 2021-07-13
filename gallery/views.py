@@ -23,3 +23,4 @@ def search(request):
         message = "You haven't searched for any term"
         return render(request, 'photo/search.html')
 
+  

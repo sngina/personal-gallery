@@ -18,6 +18,10 @@ Follow this link 'https://sngina-gallery.herokuapp.com/'
 It is hosted by heroku
 
 ---
+## Access DashBoard
+
+Follow this link 'https://sngina-gallery.herokuapp.com/admin'
+
 
 ## SetUp
 ### Cloning
@@ -30,7 +34,8 @@ It is hosted by heroku
 ## Running the Application
 
 * To run the application, in your terminal:
-
+        $pip install virtualenv
+        $source env/bin/activate
         $ pip install -r requirements.txt
         $ chmod +x run.py
         $ ./run.py
